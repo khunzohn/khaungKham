@@ -38,6 +38,6 @@ public class MarketDay extends GregorianCalendar {
     }
 
     public String getDayNMonth() {
-        return getEngMonth() + "-" + get(DAY_OF_MONTH);
+        return getEngMonth() + " " + get(DAY_OF_MONTH);
     }
 }

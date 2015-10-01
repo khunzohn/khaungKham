@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">KhwangKham</string>
+    <string name="app_name">ေကာင္ခမ္း</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="developer">Product of Hilllander Inc.</string>
+    <string name="client">ေကာင္ခမ္း</string>
 </resources>

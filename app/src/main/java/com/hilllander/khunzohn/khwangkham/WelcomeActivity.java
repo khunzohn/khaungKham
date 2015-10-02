@@ -25,4 +25,8 @@ public class WelcomeActivity extends AppCompatActivity {
             getSupportActionBar().hide();
     }
 
+    @Override
+    public void onBackPressed() {
+
+    }
 }

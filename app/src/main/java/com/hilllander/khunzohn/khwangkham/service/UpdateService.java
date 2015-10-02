@@ -6,6 +6,7 @@ import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.IBinder;
 import android.widget.RemoteViews;
 
@@ -27,6 +28,7 @@ public class UpdateService extends Service {
     private String dayAndMonth;
     private String myaDay;
     private Bitmap background;
+    private int backgroundId;
 
 
     public UpdateService() {
@@ -46,14 +48,16 @@ public class UpdateService extends Service {
 
         int index = new Random().nextInt(6);
         background = getBackground(index);
+        backgroundId = getBackgroundID(index);
 
         RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.widget_layout);
         remoteViews.setTextViewText(R.id.text_market_day, marketDay);
         remoteViews.setTextViewText(R.id.text_year, year);
         remoteViews.setTextViewText(R.id.text_day_month, dayAndMonth);
         remoteViews.setTextViewText(R.id.text_mya_day, myaDay);
-        remoteViews.setImageViewBitmap(R.id.widget_layout, background);
+//        remoteViews.setImageViewBitmap(R.id.widget_layout, background);
 
+        remoteViews.setInt(R.id.widget_layout, "setBackgroundResource", backgroundId);
         Intent i = new Intent(this, WelcomeActivity.class);
         PendingIntent startWelcome = PendingIntent.getActivity(this, 0, i, 0);
         remoteViews.setOnClickPendingIntent(R.id.text_market_day, startWelcome);
@@ -75,25 +79,64 @@ public class UpdateService extends Service {
         manager.updateAppWidget(thisWidget, remoteViews);
     }
 
-    private Bitmap getBackground(int index) {
+    private int getBackgroundID(int index) {
+        int resId;
         switch (index) {
             case 0:
+                resId = R.drawable.back_0;
                 break;
             case 1:
+                resId = R.drawable.back_1;
                 break;
             case 2:
+                resId = R.drawable.back_2;
                 break;
             case 3:
+                resId = R.drawable.back_3;
                 break;
             case 4:
+                resId = R.drawable.back_4;
                 break;
             case 5:
+                resId = R.drawable.back_5;
                 break;
             case 6:
+                resId = R.drawable.back_6;
                 break;
             default:
+                resId = R.drawable.back_default;
         }
-        return null;
+        return resId;
+    }
+
+    private Bitmap getBackground(int index) {
+        int resId;
+        switch (index) {
+            case 0:
+                resId = R.drawable.back_0;
+                break;
+            case 1:
+                resId = R.drawable.back_1;
+                break;
+            case 2:
+                resId = R.drawable.back_2;
+                break;
+            case 3:
+                resId = R.drawable.back_3;
+                break;
+            case 4:
+                resId = R.drawable.back_4;
+                break;
+            case 5:
+                resId = R.drawable.back_5;
+                break;
+            case 6:
+                resId = R.drawable.back_6;
+                break;
+            default:
+                resId = R.drawable.back_default;
+        }
+        return BitmapFactory.decodeResource(getResources(), resId);
     }
 
     @Override

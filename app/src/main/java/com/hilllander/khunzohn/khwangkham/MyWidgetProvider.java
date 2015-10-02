@@ -17,7 +17,7 @@ import java.util.Calendar;
  */
 public class MyWidgetProvider extends AppWidgetProvider {
 
-    private static final int SEC_INTERVAL = 15;
+    private static final int SEC_INTERVAL = 15 * 60;
     private MarketDay mMarketDay = new MarketDay();
     private String marketDay;
     private String year;

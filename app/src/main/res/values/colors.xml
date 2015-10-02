@@ -7,4 +7,5 @@
     <color name="transparent_black">#ff8c8c8c</color>
     <color name="primary">#ff2330dd</color>
     <color name="accent">#ff6c7b76</color>
+    <color name="black_alpha">#30000000</color>
 </resources>

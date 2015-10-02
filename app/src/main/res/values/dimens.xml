@@ -7,4 +7,5 @@
     <dimen name="normal_text">20sp</dimen>
     <dimen name="frame_padding">16dp</dimen>
     <dimen name="welcome_normal_text">20sp</dimen>
+    <dimen name="app_bar_layout_height">220dp</dimen>
 </resources>

@@ -41,7 +41,7 @@ public class UpdateService extends Service {
     }
 
     private void update() {
-        marketDay = cal.getMarketDay();
+        marketDay = cal.getMarketDay(cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR));
         year = String.valueOf(cal.get(Calendar.YEAR));
         dayAndMonth = cal.getDayNMonth();
         myaDay = cal.getMyaDay();

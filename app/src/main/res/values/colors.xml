@@ -5,7 +5,7 @@
     <color name="text_color">@color/white</color>
     <color name="dark_blue">#ff0e135d</color>
     <color name="transparent_black">#ff8c8c8c</color>
-    <color name="primary">#ffdd165c</color>
-    <color name="accent">#ff29567b</color>
+    <color name="primary">#ff29567b</color>
+    <color name="accent">#ff687b06</color>
     <color name="black_alpha">#30000000</color>
 </resources>

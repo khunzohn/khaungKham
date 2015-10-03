@@ -27,7 +27,6 @@ public class UpdateService extends Service {
     private String year;
     private String dayAndMonth;
     private String myaDay;
-    private Bitmap background;
     private int backgroundId;
 
 
@@ -46,8 +45,7 @@ public class UpdateService extends Service {
         dayAndMonth = cal.getDayNMonth();
         myaDay = cal.getMyaDay();
 
-        int index = new Random().nextInt(6);
-        background = getBackground(index);
+        int index = new Random().nextInt(11);
         backgroundId = getBackgroundID(index);
 
         RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.widget_layout);
@@ -102,6 +100,21 @@ public class UpdateService extends Service {
                 break;
             case 6:
                 resId = R.drawable.back_6;
+                break;
+            case 7:
+                resId = R.drawable.back_7;
+                break;
+            case 8:
+                resId = R.drawable.back_8;
+                break;
+            case 9:
+                resId = R.drawable.back_9;
+                break;
+            case 10:
+                resId = R.drawable.back_10;
+                break;
+            case 11:
+                resId = R.drawable.back_11;
                 break;
             default:
                 resId = R.drawable.back_default;

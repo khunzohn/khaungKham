@@ -11,6 +11,7 @@ import com.hilllander.khunzohn.khwangkham.service.UpdateService;
 import com.hilllander.khunzohn.khwangkham.util.MarketDay;
 
 import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * Created by khunzohn on 10/1/15.
@@ -29,7 +30,7 @@ public class MyWidgetProvider extends AppWidgetProvider {
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         final AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
-        final Calendar time = Calendar.getInstance();
+        final Calendar time = Calendar.getInstance(Locale.getDefault());
         time.set(Calendar.MINUTE, 0);
         time.set(Calendar.SECOND, 0);
         time.set(Calendar.MILLISECOND, 0);

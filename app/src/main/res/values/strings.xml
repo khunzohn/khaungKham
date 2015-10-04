@@ -4,8 +4,19 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
-    <string name="developer">Product of Hilllander Inc.</string>
+    <string name="developer">Product of hilllander</string>
     <string name="client">ေကာင္ခမ္း</string>
     <string name="action_about">About us</string>
     <string name="title_activity_about_us">AboutUsActivity</string>
+    <string name="logo_text_hilllander">Hilllander</string>
+    <string name="logo_text_studio">studio</string>
+    <string name="motto">We craft things with love</string>
+    <string name="title_our_team">Our Team :</string>
+    <string name="label_programming">Programming :</string>
+    <string name="value_of_programming">khunzohn</string>
+    <string name="label_photographer">Photographer :</string>
+    <string name="value_photographer">Boam Boan</string>
+    <string name="label_design">Design :</string>
+    <string name="value_design">Khun Kyi</string>
+    <string name="client_shop_type">mobile</string>
 </resources>

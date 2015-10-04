@@ -22,7 +22,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
-                android:text="Hilllander"
+                android:paddingTop="64dp"
+                android:text="@string/logo_text_hilllander"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/extra_large_text" />
 
@@ -30,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
-                android:text="studio"
+                android:text="@string/logo_text_studio"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/normal_text" />
         </LinearLayout>
@@ -41,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:paddingRight="16dp"
-            android:text="We craft things with love"
+            android:text="@string/motto"
             android:textColor="@color/text_color" />
 
     </LinearLayout>
@@ -58,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:text="Our Team : "
+            android:text="@string/title_our_team"
             android:textColor="?attr/colorPrimary"
             android:textSize="@dimen/normal_text" />
 
@@ -80,7 +81,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:layout_weight="1"
-                android:text="Programming : "
+                android:text="@string/label_programming"
                 android:textColor="?attr/colorPrimary" />
 
             <TextView
@@ -88,7 +89,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:layout_weight="2"
-                android:text="khunzohn"
+                android:text="@string/value_of_programming"
                 android:textColor="?attr/colorPrimary" />
         </LinearLayout>
 
@@ -103,7 +104,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:layout_weight="1"
-                android:text="Photographer :"
+                android:text="@string/label_photographer"
                 android:textColor="?attr/colorPrimary" />
 
             <TextView
@@ -111,7 +112,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:layout_weight="2"
-                android:text="Boam Boan"
+                android:text="@string/value_photographer"
                 android:textColor="?attr/colorPrimary" />
         </LinearLayout>
 
@@ -126,7 +127,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:layout_weight="1"
-                android:text="Design : "
+                android:text="@string/label_design"
                 android:textColor="?attr/colorPrimary" />
 
             <TextView
@@ -134,7 +135,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:layout_weight="2"
-                android:text="Khun Kyi"
+                android:text="@string/value_design"
                 android:textColor="?attr/colorPrimary" />
         </LinearLayout>
 

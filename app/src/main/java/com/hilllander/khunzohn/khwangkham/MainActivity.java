@@ -2,28 +2,27 @@ package com.hilllander.khunzohn.khwangkham;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    CollapsingToolbarLayout toolbarLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        toolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbarLayout);
-        toolbarLayout.setTitle(getString(R.string.app_name));
+        setContentView(R.layout.activity_main_modified);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        if (getSupportActionBar() != null) {
+        if (getSupportActionBar() == null) {
             setSupportActionBar(toolbar);
-        }
+            getSupportActionBar().setTitle(getString(R.string.app_name));
+        } else
+            Toast.makeText(this, "Actionbar is not null", Toast.LENGTH_SHORT).show();
     }
 
     @Override

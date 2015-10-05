@@ -5,8 +5,6 @@ import android.app.Service;
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.IBinder;
 import android.widget.RemoteViews;
 
@@ -20,16 +18,6 @@ import java.util.Random;
 
 public class UpdateService extends Service {
 
-    private static int COUNTER = 0;
-
-    private MarketDay cal = new MarketDay();
-    private String marketDay;
-    private String year;
-    private String dayAndMonth;
-    private String myaDay;
-    private int backgroundId;
-
-
     public UpdateService() {
     }
 
@@ -40,20 +28,20 @@ public class UpdateService extends Service {
     }
 
     private void update() {
-        marketDay = cal.getMarketDay(cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR));
-        year = String.valueOf(cal.get(Calendar.YEAR));
-        dayAndMonth = cal.getDayNMonth();
-        myaDay = cal.getMyaDay();
+        MarketDay cal = new MarketDay();
+        String marketDay = cal.getMarketDay(cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR));
+        String year = String.valueOf(cal.get(Calendar.YEAR));
+        String dayAndMonth = cal.getDayNMonth();
+        String myaDay = cal.getMyaDay();
 
         int index = new Random().nextInt(11);
-        backgroundId = getBackgroundID(index);
+        int backgroundId = getBackgroundID(index);
 
         RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.widget_layout);
         remoteViews.setTextViewText(R.id.text_market_day, marketDay);
         remoteViews.setTextViewText(R.id.text_year, year);
         remoteViews.setTextViewText(R.id.text_day_month, dayAndMonth);
         remoteViews.setTextViewText(R.id.text_mya_day, myaDay);
-//        remoteViews.setImageViewBitmap(R.id.widget_layout, background);
 
         remoteViews.setInt(R.id.widget_layout, "setBackgroundResource", backgroundId);
         Intent i = new Intent(this, WelcomeActivity.class);
@@ -122,35 +110,6 @@ public class UpdateService extends Service {
         return resId;
     }
 
-    private Bitmap getBackground(int index) {
-        int resId;
-        switch (index) {
-            case 0:
-                resId = R.drawable.back_0;
-                break;
-            case 1:
-                resId = R.drawable.back_1;
-                break;
-            case 2:
-                resId = R.drawable.back_2;
-                break;
-            case 3:
-                resId = R.drawable.back_3;
-                break;
-            case 4:
-                resId = R.drawable.back_4;
-                break;
-            case 5:
-                resId = R.drawable.back_5;
-                break;
-            case 6:
-                resId = R.drawable.back_6;
-                break;
-            default:
-                resId = R.drawable.back_default;
-        }
-        return BitmapFactory.decodeResource(getResources(), resId);
-    }
 
     @Override
     public IBinder onBind(Intent intent) {

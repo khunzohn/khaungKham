@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ေကာင္ခမ္း</string>
+    <string name="app_name">ေကာင္ခံံံ့</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -11,12 +11,19 @@
     <string name="logo_text_hilllander">Hilllander</string>
     <string name="logo_text_studio">studio</string>
     <string name="motto">We craft things with love</string>
-    <string name="title_our_team">Our Team :</string>
-    <string name="label_programming">Programming :</string>
+    <string name="title_our_team">Our Team</string>
+    <string name="label_programming">Programming</string>
     <string name="value_of_programming">khunzohn</string>
-    <string name="label_photographer">Photographer :</string>
+    <string name="label_photographer">Photographer</string>
     <string name="value_photographer">boam boan</string>
-    <string name="label_design">Design :</string>
+    <string name="label_design">Design</string>
     <string name="value_design">Khun Kyi</string>
     <string name="client_shop_type">mobile</string>
+    <string name="label_address">Address</string>
+    <string name="value_address">မိန္းလမ္း ၊ ဆီဆိုင္ျမို့မေစ်းျကီး အေှရ့ဘက္ မ်က္နာစာ ၊ ဆီဆိုင္ျမို့ ။ </string>
+    <string name="label_number">Phone</string>
+    <string name="value_number">081-49174</string>
+    <string name="made_with">Made with</string>
+    <string name="by_hilllander">by hilllander team</string>
+    <string name="heart">heart</string>
 </resources>

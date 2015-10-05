@@ -19,12 +19,9 @@ public class MarketDay extends GregorianCalendar {
             31, 30, 31};
 
     public String getMarketDay(int day, final int month, final int year) {
-        String marketDay = "";
         int dayIndexInYear = getDayIndexInYear(day, month, year);
         int marketDayIndex = dayIndexInYear % 5;
-        marketDay = marketDays[marketDayIndex];
-
-        return marketDay;
+        return marketDays[marketDayIndex];
     }
 
     private int getDayIndexInYear(int day, int month, int year) {

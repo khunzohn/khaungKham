@@ -3,6 +3,6 @@
     android:initialLayout="@layout/widget_layout"
     android:minHeight="110dp"
     android:minWidth="250dp"
-    android:previewImage="@drawable/back_9">
+    android:previewImage="@drawable/preview_image">
 
 </appwidget-provider>

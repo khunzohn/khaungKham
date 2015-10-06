@@ -13,11 +13,11 @@
     <string name="motto">We craft things with love</string>
     <string name="title_our_team">Our Team</string>
     <string name="label_programming">Programmer</string>
-    <string name="value_of_programming">khunzohn</string>
+    <string name="value_of_programming">: khunzohn</string>
     <string name="label_photographer">Photographer</string>
-    <string name="value_photographer">boam boan</string>
+    <string name="value_photographer">: boam boan</string>
     <string name="label_design">Designer</string>
-    <string name="value_design">Khun Kyi</string>
+    <string name="value_design">: Khun Kyi</string>
     <string name="client_shop_type">mobile</string>
     <string name="label_address">Address</string>
     <string name="value_address">မိန္းလမ္း ၊ ဆီဆိုင္ျမို့မေစ်းျကီး အေှရ့ဘက္ မ်က္နာစာ ၊ ဆီဆိုင္ျမို့ ။ </string>
@@ -31,4 +31,10 @@
     <string name="instruction_one">ဤ app ကို Install ျပဳလုပ္ၿပီးပါက မိမိ Android ဖုန္း၏  widgets စာရင္းတြင္ ဤ app  ၏ widget ကိုေတြ႕ရပါမည္။</string>
     <string name="instruction_two">app ၏ widget ကို Home Screen သို႔ဆြဲယူ ေနရာခ် ထားၿပီးလွ်င္ စတင္ အသံုးျပဳႏိုင္ပါၿပီ။</string>
     <string name="instruction_three">ယခု app ၏အဓိက လုပ္ေဆာင္ခ်က္ မ်ားမွာ ေဒသတြင္း မသိမျဖစ္ (၅)ရက္ တစ္ေစ်းႏွင့္ ႐ႈခင္းသာျဖင့္ မိမိတို႔၏ ဖုန္းမ်ားေပၚတြင္ အလွဆင္ ႏိုင္ရန္ ယခု widget ေလးမွ လုပ္ေဆာင္ ေပးပါမည္။</string>
+    <string name="hilllander_info">Hilllander is a team of enthusiastic IT geeks and artists based in Taunggyi, Myanmar.
+                                   We give a good attention on design. We\'ve come up with the aim of providing
+                                   digital stuffs carefully crafted by folks who love to make things those help people
+                                   live their lives much smarter. </string>
+    <string name="facebook">find us on facebook. \"www.facebook.com/khunzohn\"</string>
+    <string name="hilllander">2015. Hilllander team.</string>
 </resources>

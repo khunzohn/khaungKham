@@ -26,4 +26,6 @@
     <string name="made_with">Made with </string>
     <string name="by_hilllander"> by hilllander team</string>
     <string name="heart">heart</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="help">Instruction</string>
 </resources>

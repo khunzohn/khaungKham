@@ -8,5 +8,5 @@
     <dimen name="frame_padding">16dp</dimen>
     <dimen name="welcome_normal_text">20sp</dimen>
     <dimen name="app_bar_layout_height">220dp</dimen>
-    <dimen name="extra_small_text">16sp</dimen>
+    <dimen name="extra_small_text">4sp</dimen>
 </resources>

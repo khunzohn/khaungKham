@@ -46,6 +46,28 @@
             android:textColor="@color/text_color"
             android:textSize="@dimen/normal_text" />
 
+        <LinearLayout
+            android:id="@+id/client_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/khaungkham" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="@string/client_shop_type"
+                android:textColor="@color/text_color" />
+        </LinearLayout>
+
+
         <TextView
 
             android:id="@+id/text_market_day"

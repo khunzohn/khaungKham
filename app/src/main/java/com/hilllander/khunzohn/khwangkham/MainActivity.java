@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (getSupportActionBar() == null) {
             setSupportActionBar(toolbar);
-            getSupportActionBar().setTitle(getString(R.string.app_name));
+            getSupportActionBar().setLogo(R.drawable.khaungkham);
+            getSupportActionBar().setTitle("");
         } else
             Toast.makeText(this, "Actionbar is not null", Toast.LENGTH_SHORT).show();
 

@@ -9,14 +9,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.hilllander.khunzohn.khwangkham.WelcomeActivity">
 
-    <TextView
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/client"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/extra_large_text" />-->
+    <ImageView
         android:id="@+id/client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="@string/client"
-        android:textColor="@color/text_color"
-        android:textSize="@dimen/extra_large_text" />
+        android:background="@drawable/khaungkham" />
 
     <TextView
         android:layout_width="wrap_content"

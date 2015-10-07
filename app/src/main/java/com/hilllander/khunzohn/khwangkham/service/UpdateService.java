@@ -46,7 +46,7 @@ public class UpdateService extends Service {
         remoteViews.setInt(R.id.widget_layout, "setBackgroundResource", backgroundId);
         Intent i = new Intent(this, WelcomeActivity.class);
         PendingIntent startWelcome = PendingIntent.getActivity(this, 0, i, 0);
-        remoteViews.setOnClickPendingIntent(R.id.text_market_day, startWelcome);
+        remoteViews.setOnClickPendingIntent(R.id.client_logo, startWelcome);
 
         ComponentName thisWidget = new ComponentName(this, MyWidgetProvider.class);
         AppWidgetManager manager = AppWidgetManager.getInstance(this);

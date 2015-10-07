@@ -7,7 +7,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -24,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         } else
             Toast.makeText(this, "Actionbar is not null", Toast.LENGTH_SHORT).show();
 
-        TextView heart = (TextView) findViewById(R.id.heart);
-        heart.setText(" " + getString(R.string.heart) + " ");
+//        TextView heart = (TextView) findViewById(R.id.heart);
+//        heart.setText(" " + getString(R.string.heart) + " ");
 
 
     }

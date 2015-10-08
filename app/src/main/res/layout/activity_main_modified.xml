@@ -31,7 +31,9 @@
             <FrameLayout
                 android:id="@+id/market_day"
                 android:layout_width="match_parent"
-                android:layout_height="220dp"></FrameLayout>
+                android:layout_height="220dp">
+
+            </FrameLayout>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -46,18 +48,21 @@
                     android:weightSum="5">
 
                     <Button
+                        android:id="@+id/back"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="back" />
 
                     <Button
+                        android:id="@+id/today"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="3"
                         android:text="today" />
 
                     <Button
+                        android:id="@+id/next"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"

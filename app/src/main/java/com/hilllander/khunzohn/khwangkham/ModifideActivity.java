@@ -32,7 +32,7 @@ public class ModifideActivity extends AppCompatActivity {
     private MarketDay marketDay = new MarketDay();
     private ImageButton back, next, goTo;
     private Button today;
-    private int year, month, day;
+    private int _year, _month, _day;
     private String todayDate;
 
     @Override
@@ -52,6 +52,9 @@ public class ModifideActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 marketDay.set(year, monthOfYear, dayOfMonth);
+                _year = marketDay.get(Calendar.YEAR);
+                _month = marketDay.get(Calendar.MONTH);
+                _day = marketDay.get(Calendar.DAY_OF_MONTH);
                 getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.slide_in_top, R.anim.slide_out_bottom)
                         .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
@@ -61,23 +64,23 @@ public class ModifideActivity extends AppCompatActivity {
         goTo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(ModifideActivity.this, AlertDialog.THEME_TRADITIONAL, dateSetListener, year, month, day).show();
+                new DatePickerDialog(ModifideActivity.this, AlertDialog.THEME_TRADITIONAL, dateSetListener, _year, _month, _day).show();
             }
         });
         today.setText(todayDate);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                day--;
-                if (day < 1) {
-                    day = getDaysInPrevMonth(month);
-                    month--;
+                _day--;
+                if (_day < 1) {
+                    _day = getDaysInPrevMonth(_month);
+                    _month--;
                 }
-                if (month < 0) {
-                    month = 11;
-                    year--;
+                if (_month < 0) {
+                    _month = 11;
+                    _year--;
                 }
-                marketDay.set(year, month, day);
+                marketDay.set(_year, _month, _day);
                 getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right)
                         .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
@@ -93,16 +96,16 @@ public class ModifideActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                day++;
-                if (day > getDaysInCurrentMonth(month)) {
-                    day = 1;
-                    month++;
+                _day++;
+                if (_day > getDaysInCurrentMonth(_month)) {
+                    _day = 1;
+                    _month++;
                 }
-                if (month > 11) {
-                    month = 0;
-                    year++;
+                if (_month > 11) {
+                    _month = 0;
+                    _year++;
                 }
-                marketDay.set(year, month, day);
+                marketDay.set(_year, _month, _day);
                 getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left)
                         .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
@@ -118,7 +121,7 @@ public class ModifideActivity extends AppCompatActivity {
         else
             prevMonth = month - 1;
         int numOfDays = daysInMonth[prevMonth];
-        if (marketDay.isLeapYear(year) && prevMonth == 1)
+        if (marketDay.isLeapYear(_year) && prevMonth == 1)
             numOfDays++;
 
         return numOfDays;
@@ -127,17 +130,17 @@ public class ModifideActivity extends AppCompatActivity {
     private int getDaysInCurrentMonth(final int month) {
 
         int numOfDays = daysInMonth[month];
-        if (marketDay.isLeapYear(year) && month == 1)
+        if (marketDay.isLeapYear(_year) && month == 1)
             numOfDays++;
         return numOfDays;
     }
 
     private void inflateToday() {
         Calendar cal = Calendar.getInstance();
-        year = cal.get(Calendar.YEAR);
-        month = cal.get(Calendar.MONTH);
-        day = cal.get(Calendar.DAY_OF_MONTH);
-        marketDay.set(year, month, day);
+        _year = cal.get(Calendar.YEAR);
+        _month = cal.get(Calendar.MONTH);
+        _day = cal.get(Calendar.DAY_OF_MONTH);
+        marketDay.set(_year, _month, _day);
         getSupportFragmentManager().beginTransaction()
                 .setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
                 .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))

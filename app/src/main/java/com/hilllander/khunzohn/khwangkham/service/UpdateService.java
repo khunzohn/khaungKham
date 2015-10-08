@@ -38,10 +38,10 @@ public class UpdateService extends Service {
         int backgroundId = getBackgroundID(index);
 
         RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.widget_layout);
-        remoteViews.setTextViewText(R.id.text_market_day, marketDay);
-        remoteViews.setTextViewText(R.id.text_year, year);
-        remoteViews.setTextViewText(R.id.text_day_month, dayAndMonth);
-        remoteViews.setTextViewText(R.id.text_mya_day, myaDay);
+        remoteViews.setTextViewText(R.id.widget_text_market_day, marketDay);
+        remoteViews.setTextViewText(R.id.widget_text_year, year);
+        remoteViews.setTextViewText(R.id.widget_text_day_n_month, dayAndMonth);
+        remoteViews.setTextViewText(R.id.widget_text_mya_day, myaDay);
 
         remoteViews.setInt(R.id.widget_layout, "setBackgroundResource", backgroundId);
         Intent i = new Intent(this, WelcomeActivity.class);

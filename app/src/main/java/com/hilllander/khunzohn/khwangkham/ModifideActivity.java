@@ -19,7 +19,6 @@ import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.hilllander.khunzohn.khwangkham.util.MarketDay;
 
@@ -45,7 +44,6 @@ public class ModifideActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setLogo(R.drawable.khaungkham);
-        getSupportActionBar().setTitle("mobile");
         inflateToday();
 
         back = (ImageButton) findViewById(R.id.back);
@@ -168,7 +166,8 @@ public class ModifideActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_help) {
-            Toast.makeText(this, "help!", Toast.LENGTH_SHORT).show();
+            Intent help = new Intent(this, HelpActivity.class);
+            startActivity(help);
         } else if (id == R.id.action_info) {
             Intent info = new Intent(this, InfoActivity.class);
             startActivity(info);

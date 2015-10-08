@@ -51,6 +51,7 @@ public class ModifideActivity extends AppCompatActivity {
                 }
                 marketDay.set(year, month, day);
                 getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right)
                         .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
                         .commit();
             }
@@ -75,6 +76,7 @@ public class ModifideActivity extends AppCompatActivity {
                 }
                 marketDay.set(year, month, day);
                 getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left)
                         .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
                         .commit();
             }

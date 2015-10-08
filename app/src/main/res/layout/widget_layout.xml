@@ -56,15 +56,14 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/khaungkham" />
+                android:src="@drawable/khaungkham" />
 
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="4dp"
-                android:text="@string/client_shop_type"
-                android:textColor="@color/text_color" />
+                android:src="@drawable/launch" />
         </LinearLayout>
 
 

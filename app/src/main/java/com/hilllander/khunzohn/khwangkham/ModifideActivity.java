@@ -28,6 +28,7 @@ public class ModifideActivity extends AppCompatActivity {
     private MarketDay marketDay = new MarketDay();
     private Button back, today, next;
     private int year, month, day;
+    private String todayDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +37,12 @@ public class ModifideActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        inflateToday();
+
         back = (Button) findViewById(R.id.back);
         today = (Button) findViewById(R.id.today);
         next = (Button) findViewById(R.id.next);
+        today.setText(todayDate);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +87,6 @@ public class ModifideActivity extends AppCompatActivity {
                         .commit();
             }
         });
-        inflateToday();
     }
 
     private int getDaysInPrevMonth(final int month) {
@@ -117,6 +120,7 @@ public class ModifideActivity extends AppCompatActivity {
                 .setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
                 .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
                 .commit();
+        todayDate = marketDay.getDayNMonth() + "," + marketDay.get(Calendar.YEAR);
     }
 
     @Override

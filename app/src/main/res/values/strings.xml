@@ -49,4 +49,6 @@
     <string name="next_button">next day</string>
     <string name="action_help">How to use</string>
     <string name="action_info">About us</string>
+    <string name="title_activity_info">InfoActivity</string>
+    <string name="founded_year">2015. Hilllander team.</string>
 </resources>

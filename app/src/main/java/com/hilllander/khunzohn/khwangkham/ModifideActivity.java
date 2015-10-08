@@ -2,6 +2,7 @@ package com.hilllander.khunzohn.khwangkham;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -169,7 +170,8 @@ public class ModifideActivity extends AppCompatActivity {
         if (id == R.id.action_help) {
             Toast.makeText(this, "help!", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.action_info) {
-            Toast.makeText(this, "about us", Toast.LENGTH_SHORT).show();
+            Intent info = new Intent(this, InfoActivity.class);
+            startActivity(info);
         }
 
         return super.onOptionsItemSelected(item);

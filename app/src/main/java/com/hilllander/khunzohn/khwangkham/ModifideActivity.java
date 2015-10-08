@@ -1,5 +1,6 @@
 package com.hilllander.khunzohn.khwangkham;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -27,7 +29,7 @@ public class ModifideActivity extends AppCompatActivity {
             31, 30, 31};
     private FloatingActionButton fab;
     private MarketDay marketDay = new MarketDay();
-    private ImageButton back, next;
+    private ImageButton back, next, goTo;
     private Button today;
     private int year, month, day;
     private String todayDate;
@@ -44,6 +46,23 @@ public class ModifideActivity extends AppCompatActivity {
         back = (ImageButton) findViewById(R.id.back);
         today = (Button) findViewById(R.id.today);
         next = (ImageButton) findViewById(R.id.next);
+        goTo = (ImageButton) findViewById(R.id.date_picker);
+        final DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                marketDay.set(year, monthOfYear, dayOfMonth);
+                getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
+                        .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
+                        .commit();
+            }
+        };
+        goTo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(ModifideActivity.this, dateSetListener, year, month, day).show();
+            }
+        });
         today.setText(todayDate);
         back.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,5 +1,6 @@
 package com.hilllander.khunzohn.khwangkham;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -52,7 +53,7 @@ public class ModifideActivity extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 marketDay.set(year, monthOfYear, dayOfMonth);
                 getSupportFragmentManager().beginTransaction()
-                        .setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
+                        .setCustomAnimations(R.anim.slide_in_top, R.anim.slide_out_bottom)
                         .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
                         .commit();
             }
@@ -60,7 +61,7 @@ public class ModifideActivity extends AppCompatActivity {
         goTo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new DatePickerDialog(ModifideActivity.this, dateSetListener, year, month, day).show();
+                new DatePickerDialog(ModifideActivity.this, AlertDialog.THEME_TRADITIONAL, dateSetListener, year, month, day).show();
             }
         });
         today.setText(todayDate);

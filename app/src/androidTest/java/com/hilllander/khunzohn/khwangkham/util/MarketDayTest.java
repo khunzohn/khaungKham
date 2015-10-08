@@ -33,9 +33,9 @@ public class MarketDayTest extends TestCase {
         market.set(year, month, day);
         assertEquals(mday, market.getMyaDay());
     }
-
-    public void testGetEngMonth() throws Exception {
-        String month = "October";
-        assertEquals(month, market.getEngMonth());
-    }
+//
+//    public void testGetEngMonth() throws Exception {
+//        String month = "October";
+//        assertEquals(month, market.getEngMonth());
+//    }
 }

@@ -42,6 +42,8 @@ public class ModifideActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setLogo(R.drawable.khaungkham);
+        getSupportActionBar().setTitle("mobile");
         inflateToday();
 
         back = (ImageButton) findViewById(R.id.back);

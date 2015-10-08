@@ -45,7 +45,10 @@
             android:label="@string/title_activity_help" />
         <activity
             android:name=".ModifideActivity"
-            android:label="@string/title_activity_modifide"></activity>
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
     </application>
 
 </manifest>

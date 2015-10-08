@@ -45,4 +45,6 @@
     <string name="website_url">http://khunzohn.github.io/khaungKham</string>
     <string name="title_activity_modifide">ModifideActivity</string>
     <string name="goto_button">go to a date</string>
+    <string name="back_button">back date</string>
+    <string name="next_button">next day</string>
 </resources>

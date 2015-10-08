@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -26,7 +27,8 @@ public class ModifideActivity extends AppCompatActivity {
             31, 30, 31};
     private FloatingActionButton fab;
     private MarketDay marketDay = new MarketDay();
-    private Button back, today, next;
+    private ImageButton back, next;
+    private Button today;
     private int year, month, day;
     private String todayDate;
 
@@ -39,9 +41,9 @@ public class ModifideActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         inflateToday();
 
-        back = (Button) findViewById(R.id.back);
+        back = (ImageButton) findViewById(R.id.back);
         today = (Button) findViewById(R.id.today);
-        next = (Button) findViewById(R.id.next);
+        next = (ImageButton) findViewById(R.id.next);
         today.setText(todayDate);
         back.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -47,4 +47,6 @@
     <string name="goto_button">go to a date</string>
     <string name="back_button">back date</string>
     <string name="next_button">next day</string>
+    <string name="action_help">How to use</string>
+    <string name="action_info">About us</string>
 </resources>

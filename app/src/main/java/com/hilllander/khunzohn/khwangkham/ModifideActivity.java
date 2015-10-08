@@ -18,6 +18,7 @@ import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hilllander.khunzohn.khwangkham.util.MarketDay;
 
@@ -165,8 +166,10 @@ public class ModifideActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_help) {
+            Toast.makeText(this, "help!", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.action_info) {
+            Toast.makeText(this, "about us", Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);

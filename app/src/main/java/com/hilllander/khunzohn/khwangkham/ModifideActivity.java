@@ -171,7 +171,8 @@ public class ModifideActivity extends AppCompatActivity {
         private static final String MARKET_DAY = "market mDay";
         private static final String DAY = "mDay";
         private static final String DATE = "date";
-        private String mMarketDay, mDay, date;
+        private static final String MYEAR = "mYear";
+        private String mMarketDay, mDay, date, mYear;
 
         public MarketDayFragment() {
         }
@@ -182,6 +183,7 @@ public class ModifideActivity extends AppCompatActivity {
             args.putString(MARKET_DAY, marketDay.getMarketDay());
             args.putString(DAY, marketDay.getMyaDay());
             args.putString(DATE, marketDay.getDayNMonth());
+            args.putString(MYEAR, String.valueOf(marketDay.get(Calendar.YEAR)));
             fragment.setArguments(args);
             return fragment;
         }
@@ -194,12 +196,15 @@ public class ModifideActivity extends AppCompatActivity {
             mMarketDay = args.getString(MARKET_DAY);
             mDay = args.getString(DAY);
             date = args.getString(DATE);
+            mYear = args.getString(MYEAR);
             TextView marketDay = (TextView) view.findViewById(R.id.app_text_marketday);
             marketDay.setText(mMarketDay);
             TextView mDay = (TextView) view.findViewById(R.id.app_text_day);
             mDay.setText(this.mDay);
             TextView mDate = (TextView) view.findViewById(R.id.app_text_date);
             mDate.setText(date);
+            TextView year = (TextView) view.findViewById(R.id.app_text_year);
+            year.setText(mYear);
 
             RelativeLayout background = (RelativeLayout) view.findViewById(R.id.app_widget_background);
             background.setBackgroundResource(getRandomResId());

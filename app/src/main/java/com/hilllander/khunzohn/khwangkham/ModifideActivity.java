@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.hilllander.khunzohn.khwangkham.util.MarketDay;
 
@@ -57,6 +58,9 @@ public class ModifideActivity extends AppCompatActivity {
     }
 
     public static class MarketDayFragment extends Fragment {
+        private static final String MARKET_DAY = "market day";
+        private static final String DAY = "day";
+        private static final String DATE = "date";
         private String mMarketDay, day, date;
 
         public MarketDayFragment() {
@@ -64,7 +68,11 @@ public class ModifideActivity extends AppCompatActivity {
 
         public static Fragment getInstance(MarketDay marketDay) {
             Fragment fragment = new MarketDayFragment();
-
+            Bundle args = new Bundle();
+            args.putString(MARKET_DAY, marketDay.getMarketDay());
+            args.putString(DAY, marketDay.getMyaDay());
+            args.putString(DATE, marketDay.getDayNMonth());
+            fragment.setArguments(args);
             return fragment;
         }
 
@@ -72,6 +80,16 @@ public class ModifideActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
             View view = inflater.inflate(R.layout.fragment_client, container, false);
+            Bundle args = getArguments();
+            mMarketDay = args.getString(MARKET_DAY);
+            day = args.getString(DAY);
+            date = args.getString(DATE);
+            TextView marketDay = (TextView) view.findViewById(R.id.app_text_marketday);
+            marketDay.setText(mMarketDay);
+            TextView mDay = (TextView) view.findViewById(R.id.app_text_day);
+            mDay.setText(day);
+            TextView mDate = (TextView) view.findViewById(R.id.app_text_date);
+            mDate.setText(date);
             return view;
         }
 

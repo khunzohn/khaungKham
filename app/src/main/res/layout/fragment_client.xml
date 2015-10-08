@@ -10,41 +10,44 @@
         android:layout_height="match_parent"
         android:background="@drawable/back_1">
 
-        <TextView
-            android:id="@+id/app_text_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
             android:layout_alignParentTop="true"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
-            android:text="Oct,15"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/normal_text" />
+            android:background="@color/black_alpha">
 
-        <TextView
-            android:id="@+id/app_text_day"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:paddingRight="8dp"
-            android:paddingTop="8dp"
-            android:text="ေသာျကာ"
-            android:textColor="@color/text_color"
-            android:textSize="@dimen/normal_text" />
+            <TextView
+                android:id="@+id/app_text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/normal_text" />
+
+            <TextView
+                android:id="@+id/app_text_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/normal_text" />
+        </FrameLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentBottom="true"
-            android:foreground="@color/black_alpha">
+            android:background="@color/black_alpha">
 
             <TextView
                 android:id="@+id/app_text_marketday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
+                android:layout_gravity="start|center_vertical"
                 android:paddingLeft="8dp"
                 android:text="ဆီဆိုင္ေစ်း"
                 android:textColor="@color/text_color"

@@ -12,10 +12,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.hilllander.khunzohn.khwangkham.util.MarketDay;
+
 
 public class ModifideActivity extends AppCompatActivity {
 
     private FloatingActionButton fab;
+    private MarketDay marketDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +28,9 @@ public class ModifideActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        marketDay = new MarketDay();
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.market_day, ClientFragment.getInstance())
+                .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
                 .commit();
     }
 
@@ -53,14 +56,16 @@ public class ModifideActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public static class ClientFragment extends Fragment {
+    public static class MarketDayFragment extends Fragment {
+        private String mMarketDay, day, date;
 
-
-        public ClientFragment() {
+        public MarketDayFragment() {
         }
 
-        public static Fragment getInstance() {
-            return new ClientFragment();
+        public static Fragment getInstance(MarketDay marketDay) {
+            Fragment fragment = new MarketDayFragment();
+
+            return fragment;
         }
 
         @Nullable

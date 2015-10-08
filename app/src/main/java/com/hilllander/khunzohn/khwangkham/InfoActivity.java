@@ -14,8 +14,6 @@ import com.hilllander.khunzohn.khwangkham.util.FacebookOpener;
 
 
 public class InfoActivity extends AppCompatActivity {
-    private CollapsingToolbarLayout collapse;
-    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +23,9 @@ public class InfoActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        collapse = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
+        CollapsingToolbarLayout collapse = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout);
         collapse.setTitle("Hilllander");
-        fab = (FloatingActionButton) findViewById(R.id.fab_info);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_info);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

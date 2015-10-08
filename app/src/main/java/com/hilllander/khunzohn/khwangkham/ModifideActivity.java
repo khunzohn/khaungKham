@@ -57,7 +57,7 @@ public class ModifideActivity extends AppCompatActivity {
                 _day = marketDay.get(Calendar.DAY_OF_MONTH);
                 getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.slide_in_top, R.anim.slide_out_bottom)
-                        .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
+                        .replace(R.id.market_day, InAppWidgetFragment.getInstance(marketDay))
                         .commit();
             }
         };
@@ -83,7 +83,7 @@ public class ModifideActivity extends AppCompatActivity {
                 marketDay.set(_year, _month, _day);
                 getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right)
-                        .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
+                        .replace(R.id.market_day, InAppWidgetFragment.getInstance(marketDay))
                         .commit();
             }
         });
@@ -108,7 +108,7 @@ public class ModifideActivity extends AppCompatActivity {
                 marketDay.set(_year, _month, _day);
                 getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left)
-                        .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
+                        .replace(R.id.market_day, InAppWidgetFragment.getInstance(marketDay))
                         .commit();
             }
         });
@@ -143,7 +143,7 @@ public class ModifideActivity extends AppCompatActivity {
         marketDay.set(_year, _month, _day);
         getSupportFragmentManager().beginTransaction()
                 .setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
-                .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
+                .replace(R.id.market_day, InAppWidgetFragment.getInstance(marketDay))
                 .commit();
         todayDate = marketDay.getDayNMonth() + "," + marketDay.get(Calendar.YEAR);
     }
@@ -172,22 +172,22 @@ public class ModifideActivity extends AppCompatActivity {
 
     public void changeBackground(View view) {
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
+                .replace(R.id.market_day, InAppWidgetFragment.getInstance(marketDay))
                 .commit();
     }
 
-    public static class MarketDayFragment extends Fragment {
+    public static class InAppWidgetFragment extends Fragment {
         private static final String MARKET_DAY = "market mDay";
         private static final String DAY = "mDay";
         private static final String DATE = "date";
         private static final String MYEAR = "mYear";
         private String mMarketDay, mDay, date, mYear;
 
-        public MarketDayFragment() {
+        public InAppWidgetFragment() {
         }
 
         public static Fragment getInstance(MarketDay marketDay) {
-            Fragment fragment = new MarketDayFragment();
+            Fragment fragment = new InAppWidgetFragment();
             Bundle args = new Bundle();
             args.putString(MARKET_DAY, marketDay.getMarketDay());
             args.putString(DAY, marketDay.getMyaDay());

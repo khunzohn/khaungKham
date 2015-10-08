@@ -170,6 +170,12 @@ public class ModifideActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void changeBackground(View view) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
+                .commit();
+    }
+
     public static class MarketDayFragment extends Fragment {
         private static final String MARKET_DAY = "market mDay";
         private static final String DAY = "mDay";

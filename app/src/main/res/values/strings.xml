@@ -43,4 +43,5 @@
     <string name="repository_url">https://github.com/khunzohn/khaungKham.git</string>
     <string name="website">Website</string>
     <string name="website_url">http://khunzohn.github.io/khaungKham</string>
+    <string name="title_activity_modifide">ModifideActivity</string>
 </resources>

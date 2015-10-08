@@ -42,7 +42,10 @@
             android:label="@string/title_activity_about_us" />
         <activity
             android:name=".HelpActivity"
-            android:label="@string/title_activity_help"></activity>
+            android:label="@string/title_activity_help" />
+        <activity
+            android:name=".ModifideActivity"
+            android:label="@string/title_activity_modifide"></activity>
     </application>
 
 </manifest>

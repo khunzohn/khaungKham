@@ -112,6 +112,7 @@ public class ModifideActivity extends AppCompatActivity {
         day = cal.get(Calendar.DAY_OF_MONTH);
         marketDay.set(year, month, day);
         getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(R.anim.slide_in_bottom, R.anim.slide_out_top)
                 .replace(R.id.market_day, MarketDayFragment.getInstance(marketDay))
                 .commit();
     }

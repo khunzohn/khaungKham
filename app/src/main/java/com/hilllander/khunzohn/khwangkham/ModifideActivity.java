@@ -12,11 +12,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.hilllander.khunzohn.khwangkham.util.MarketDay;
 
 import java.util.Calendar;
+import java.util.Random;
 
 
 public class ModifideActivity extends AppCompatActivity {
@@ -172,10 +174,42 @@ public class ModifideActivity extends AppCompatActivity {
             mDay.setText(this.mDay);
             TextView mDate = (TextView) view.findViewById(R.id.app_text_date);
             mDate.setText(date);
+
+            RelativeLayout background = (RelativeLayout) view.findViewById(R.id.app_widget_background);
+            background.setBackgroundResource(getRandomResId());
             return view;
         }
 
-
+        private int getRandomResId() {
+            int id = new Random().nextInt(11);
+            switch (id) {
+                case 0:
+                    return R.drawable.back_0;
+                case 1:
+                    return R.drawable.back_1;
+                case 2:
+                    return R.drawable.back_2;
+                case 3:
+                    return R.drawable.back_3;
+                case 4:
+                    return R.drawable.back_4;
+                case 5:
+                    return R.drawable.back_5;
+                case 6:
+                    return R.drawable.back_6;
+                case 7:
+                    return R.drawable.back_7;
+                case 8:
+                    return R.drawable.back_8;
+                case 9:
+                    return R.drawable.back_9;
+                case 10:
+                    return R.drawable.back_10;
+                case 11:
+                    return R.drawable.back_11;
+                default:
+                    return R.drawable.back_3;
+            }
+        }
     }
-
 }

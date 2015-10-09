@@ -34,7 +34,7 @@ public class UpdateService extends Service {
         String dayAndMonth = cal.getDayNMonth();
         String myaDay = cal.getMyaDay();
 
-        int index = new Random().nextInt(11);
+        int index = new Random().nextInt(22);
         int backgroundId = getBackgroundID(index);
 
         RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.widget_layout);
@@ -103,6 +103,39 @@ public class UpdateService extends Service {
                 break;
             case 11:
                 resId = R.drawable.back_11;
+                break;
+            case 12:
+                resId = R.drawable.back_12;
+                break;
+            case 13:
+                resId = R.drawable.back_13;
+                break;
+            case 14:
+                resId = R.drawable.back_14;
+                break;
+            case 15:
+                resId = R.drawable.back_15;
+                break;
+            case 16:
+                resId = R.drawable.back_16;
+                break;
+            case 17:
+                resId = R.drawable.back_17;
+                break;
+            case 18:
+                resId = R.drawable.back_18;
+                break;
+            case 19:
+                resId = R.drawable.back_19;
+                break;
+            case 20:
+                resId = R.drawable.back_20;
+                break;
+            case 21:
+                resId = R.drawable.back_21;
+                break;
+            case 22:
+                resId = R.drawable.back_22;
                 break;
             default:
                 resId = R.drawable.back_default;

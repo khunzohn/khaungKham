@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         private int getRandomResId() {
-            int id = new Random().nextInt(11);
+            int id = new Random().nextInt(22);
             switch (id) {
                 case 0:
                     return R.drawable.back_0;
@@ -250,6 +250,28 @@ public class MainActivity extends AppCompatActivity {
                     return R.drawable.back_10;
                 case 11:
                     return R.drawable.back_11;
+                case 12:
+                    return R.drawable.back_12;
+                case 13:
+                    return R.drawable.back_13;
+                case 14:
+                    return R.drawable.back_14;
+                case 15:
+                    return R.drawable.back_15;
+                case 16:
+                    return R.drawable.back_16;
+                case 17:
+                    return R.drawable.back_17;
+                case 18:
+                    return R.drawable.back_18;
+                case 19:
+                    return R.drawable.back_19;
+                case 20:
+                    return R.drawable.back_20;
+                case 21:
+                    return R.drawable.back_21;
+                case 22:
+                    return R.drawable.back_22;
                 default:
                     return R.drawable.back_3;
             }

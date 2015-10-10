@@ -30,7 +30,7 @@
     <string name="help">Instruction</string>
     <string name="instruction_one">ဤ app ကို Install ျပဳလုပ္ၿပီးပါက မိမိ Android ဖုန္း၏  widgets စာရင္းတြင္ ဤ app  ၏ widget ကိုေတြ႕ရပါမည္။</string>
     <string name="instruction_two">app ၏ widget ကို Home Screen သို႔ဆြဲယူ ေနရာခ် ထားၿပီးလွ်င္ စတင္ အသံုးျပဳႏိုင္ပါၿပီ။</string>
-    <string name="instruction_three">ယခု app ၏အဓိက လုပ္ေဆာင္ခ်က္ မ်ားမွာ ေဒသတြင္း မသိမျဖစ္ (၅)ရက္ တစ္ေစ်းႏွင့္ ႐ႈခင္းသာပံုမ်ားျဖင့္ မိမိတို႔၏ ဖုန္းမ်ားေပၚတြင္ အလွဆင္ ႏိုင္ရန္ ယခု widget ေလးမွ လုပ္ေဆာင္ ေပးပါမည္။</string>
+    <string name="instruction_three">ယခု app ၏အဓိက လုပ္ေဆာင္ခ်က္ မ်ားမွာ ေဒသတြင္း မသိမျဖစ္ (၅)ရက္ တစ္ေစ်းႏွင့္ ႐ႈခင္းသာပံု မ်ားျဖင့္ မိမိတို႔၏ ဖုန္းမ်ား ေပၚတြင္ အလွဆင္ ႏိုင္ရန္ ယခု widget ေလးမွ လုပ္ေဆာင္ ေပးပါမည္။</string>
     <string name="hilllander_info">Hilllander is a team of enthusiastic IT geeks and artists based in Taunggyi, Myanmar.
                                    We give a good attention on design. We\'ve come up with the aim of providing
                                    digital stuffs carefully crafted by folks who love to make things those help people
@@ -51,6 +51,6 @@
     <string name="action_info">About us</string>
     <string name="title_activity_info">InfoActivity</string>
     <string name="founded_year">2015. Hilllander team.</string>
-    <string name="client_message">kajsdkfj jalksjdfklj ajsdkfj;l ajlksdjf  jalksdjf askdjf  aklsdjfl alksjdf a jadjf ak jdflka jaskldjf askdj asdkj asdfkj a;sdkfj asdk j aksjdflk ajsdlkfj askdjf asldkjf askdjf aksdjf a;skdjf aksdjf aksjdf a;lksdjf aslkdjf aksdjf</string>
+    <string name="client_message">ကြ်န္ေတာ္တို႔ ဆိုင္မွ ေခတ္မွီ ဆန္းသစ္ေသာ ဖုန္းမ်ားႏွင့္ ဖုန္းအပို ပစၥည္း အမ်ဳိးမ်ဳိး တို႔ကို ေစ်းႏွဳန္း ခ်ဳိသာ စြာျဖင့္ ေရာင္းခ် ေပးေနျပီး လူၾကီးမင္း မ်ား၏ ဖုန္းႏွင့္ ပက္သက္ေသာ ၀န္ေဆာင္မူ အမ်ဳိးမ်ဳိး ကိုလည္း အေကာင္းဆံုး ေဆာင္ရြက္ ေပးေနပါျပီ။</string>
     <string name="icon_set">Some icons used in this app are the official icon set from google.</string>
 </resources>

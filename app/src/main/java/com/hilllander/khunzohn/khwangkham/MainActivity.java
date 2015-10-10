@@ -3,6 +3,7 @@ package com.hilllander.khunzohn.khwangkham;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -19,6 +20,7 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.hilllander.khunzohn.khwangkham.util.FontSupplier;
 import com.hilllander.khunzohn.khwangkham.util.MarketDay;
 
 import java.util.Calendar;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private final int[] daysInMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30,
             31, 30, 31};
     private final MarketDay marketDay = new MarketDay();
+    Typeface zawgyi;
     private int _year, _month, _day;
     private String todayDate;
 
@@ -36,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        zawgyi = FontSupplier.getZawgyiTypeface(this);
+        TextView clientMessage = (TextView) findViewById(R.id.client_message);
+        clientMessage.setTypeface(zawgyi);
+        TextView clientAddress = (TextView) findViewById(R.id.client_address);
+        clientAddress.setTypeface(zawgyi);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -203,15 +211,18 @@ public class MainActivity extends AppCompatActivity {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.fragment_client, container, false);
+            View view = inflater.inflate(R.layout.fragment_in_app_widget, container, false);
             Bundle args = getArguments();
             mMarketDay = args.getString(MARKET_DAY);
             mDay = args.getString(DAY);
             date = args.getString(DATE);
             mYear = args.getString(MYEAR);
+            Typeface zawgyi = FontSupplier.getZawgyiTypeface(getActivity());
             TextView marketDay = (TextView) view.findViewById(R.id.app_text_marketday);
+            marketDay.setTypeface(zawgyi);
             marketDay.setText(mMarketDay);
             TextView mDay = (TextView) view.findViewById(R.id.app_text_day);
+            mDay.setTypeface(zawgyi);
             mDay.setText(this.mDay);
             TextView mDate = (TextView) view.findViewById(R.id.app_text_date);
             mDate.setText(date);

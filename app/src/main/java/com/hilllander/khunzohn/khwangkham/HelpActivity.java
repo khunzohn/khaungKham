@@ -1,10 +1,14 @@
 package com.hilllander.khunzohn.khwangkham;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.hilllander.khunzohn.khwangkham.util.FontSupplier;
 
 
 public class HelpActivity extends AppCompatActivity {
@@ -17,6 +21,15 @@ public class HelpActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("How to use");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Typeface zawgyi = FontSupplier.getZawgyiTypeface(this);
+        TextView instruction_1 = (TextView) findViewById(R.id.instruction_one);
+        instruction_1.setTypeface(zawgyi);
+        TextView instruction_2 = (TextView) findViewById(R.id.instruction_two);
+        instruction_2.setTypeface(zawgyi);
+        TextView instruction_3 = (TextView) findViewById(R.id.instruction_three);
+        instruction_3.setTypeface(zawgyi);
+        TextView hostingMessage = (TextView) findViewById(R.id.hosting_message);
+        hostingMessage.setTypeface(zawgyi);
     }
 
     @Override

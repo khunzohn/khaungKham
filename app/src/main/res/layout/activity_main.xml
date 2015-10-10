@@ -122,7 +122,8 @@
                 android:layout_gravity="center"
                 android:padding="@dimen/frame_padding"
                 android:text="@string/client_message"
-                android:textColor="?attr/colorPrimary" />
+                android:textColor="?attr/colorAccent"
+                android:textSize="@dimen/client_message" />
 
             <FrameLayout
                 android:layout_width="match_parent"

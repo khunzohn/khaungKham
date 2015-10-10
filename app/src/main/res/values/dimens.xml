@@ -12,4 +12,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="heart_size">18dp</dimen>
     <dimen name="small_text">20sp</dimen>
+    <dimen name="client_message">18sp</dimen>
 </resources>

@@ -65,7 +65,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|center_vertical"
                 android:paddingLeft="8dp"
-                android:text="ဆီဆိုင္ေစ်း"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/normal_text" />
 

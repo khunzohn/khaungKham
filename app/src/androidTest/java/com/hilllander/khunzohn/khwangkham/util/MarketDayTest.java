@@ -6,12 +6,12 @@ import junit.framework.TestCase;
  * Created by khunzohn on 10/1/15.
  */
 public class MarketDayTest extends TestCase {
-    public static final String[] mDays = new String[]{
+    private static final String[] mDays = new String[]{
             "ဆီဆိုင္ေစ်း", "ဆိုက္ေခါင္ေစ်း", "နမ့္ခုတ္ေစ်း", "ဘန္းယဥ္ေစ်း", "ေနာင္မြန္ေစ်း"
     };
 
     private static final String[] DAYS_MYA = {"တနဂၤေႏြ", "တနလၤာ", "အဂၤါ", "ဗုဒၶဟူး", "ၾကာသပေတး", "ေသာၾကာ", "စေန"};
-    MarketDay market;
+    private MarketDay market;
 
     public void setUp() throws Exception {
         super.setUp();

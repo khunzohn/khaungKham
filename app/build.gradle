@@ -1,28 +1,27 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'kk'
-            keyPassword System.getenv("KEYPWD")
-            storeFile file('/home/khunzohn/AndroidStudioProjects/key_store/khaung_kham.jks')
-            storePassword System.getenv("KSTOREPWD")
-        }
-    }
+
     compileSdkVersion 22
     buildToolsVersion "23.0.0"
     defaultConfig {
         applicationId "com.hilllander.khunzohn.khwangkham"
         minSdkVersion 14
         targetSdkVersion 22
-        versionCode 1
+        versionCode 2
+        versionName '1.1'
+
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
         }
+        debug {
+            zipAlignEnabled false
+        }
+    }
+    productFlavors {
     }
 }
 
